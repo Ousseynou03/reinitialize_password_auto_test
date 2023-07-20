@@ -32,6 +32,7 @@ Cliquer sur mot de passe oublié
     Sleep    3s
 Vérification Email
 #host=imap-mail.outlook.com #si on utilise outlook au lieu de gmail
+#host=imap.gmail.com #si on utilise gmail
     Open Mailbox    host=imap.groupagrica.com    user=your_email@groupagrica.com    password=your_password
     ${LATEST} =    Wait For Email    sender=adresse_expéditeur   timeout=300  # attendre 5 min si l'email tarde à arriver
     ${HTML} =    Open Link From Email    ${LATEST}
