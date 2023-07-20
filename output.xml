@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.10.6 on linux)" generated="20230720 12:27:44.352" rpa="false" schemaversion="4">
+<suite id="s1" name="Reinitialize Password Test Auto" source="/home/dione/Documents/Projet Daouda/reinitialize_password_test_auto">
+<suite id="s1-s1" name="Tests" source="/home/dione/Documents/Projet Daouda/reinitialize_password_test_auto/tests">
+<suite id="s1-s1-s1" name="Reinitilize Password" source="/home/dione/Documents/Projet Daouda/reinitialize_password_test_auto/tests/reinitilize_password.robot">
+<test id="s1-s1-s1-t1" name="Reinitialisation Mot de passe" line="17">
+<kw name="Ouvrir le navigateur" library="selenium_utils" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230720 12:27:44.529" level="INFO">Opening browser 'Chrome' to base url 'https://www.bestcours.com/'.</msg>
+<status status="PASS" starttime="20230720 12:27:44.529" endtime="20230720 12:27:49.339"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230720 12:27:49.339" endtime="20230720 12:27:49.447"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Exécution de test démarrée sur ${browser}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230720 12:27:49.448" endtime="20230720 12:27:49.448"/>
+</kw>
+<status status="PASS" starttime="20230720 12:27:44.528" endtime="20230720 12:27:49.448"/>
+</kw>
+<kw name="Cliquer sur se connecter" library="pages_accueil">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${champ_connecter}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230720 12:27:49.450" level="INFO">Clicking link 'xpath://*[@id="bs-example-navbar-collapse-1"]/ul[2]/li[2]/a'.</msg>
+<status status="PASS" starttime="20230720 12:27:49.449" endtime="20230720 12:27:50.628"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230720 12:27:55.630" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230720 12:27:50.629" endtime="20230720 12:27:55.631"/>
+</kw>
+<status status="PASS" starttime="20230720 12:27:49.449" endtime="20230720 12:27:55.631"/>
+</kw>
+<kw name="Cliquer sur mot de passe oublié" library="page_connexion">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${champ_mdp_oublié}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230720 12:27:55.635" level="INFO">Clicking link 'xpath:/html/body/div/div[2]/div[1]/div/div[2]/p[1]/a'.</msg>
+<status status="PASS" starttime="20230720 12:27:55.633" endtime="20230720 12:27:57.162"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${champ_element_trouvé}</arg>
+<arg>${mdp_oublié}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230720 12:27:57.163" endtime="20230720 12:27:57.235"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${champ_email}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230720 12:27:57.236" level="INFO">Clicking element 'xpath://*[@id="email"]'.</msg>
+<status status="PASS" starttime="20230720 12:27:57.235" endtime="20230720 12:27:57.395"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${champ_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230720 12:27:57.397" level="INFO">Typing text 'dioneousseynou03@gmail.com' into text field 'xpath://*[@id="email"]'.</msg>
+<status status="PASS" starttime="20230720 12:27:57.395" endtime="20230720 12:27:57.635"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${champ_reinitialiser_mdp}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230720 12:27:57.636" level="INFO">Clicking element 'xpath:/html/body/div/div[2]/div[1]/div/div[2]/form/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20230720 12:27:57.635" endtime="20230720 12:27:58.946"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${champ_msg_succes}</arg>
+<arg>${msg_succes}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230720 12:27:58.946" endtime="20230720 12:27:59.004"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230720 12:28:02.005" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230720 12:27:59.004" endtime="20230720 12:28:02.005"/>
+</kw>
+<status status="PASS" starttime="20230720 12:27:55.632" endtime="20230720 12:28:02.006"/>
+</kw>
+<kw name="Vérification Email" library="page_connexion">
+<kw name="Open Mailbox" library="ImapLibrary2">
+<arg>host=imap.gmail.com</arg>
+<arg>user=dioneousseynou03@gmail.com</arg>
+<arg>password=Awambow@1</arg>
+<doc>Open IMAP email client session to given ``host`` with given ``user`` and ``password``.</doc>
+<msg timestamp="20230720 12:28:02.649" level="FAIL">error: b'[AUTHENTICATIONFAILED] Invalid credentials (Failure)'</msg>
+<status status="FAIL" starttime="20230720 12:28:02.007" endtime="20230720 12:28:02.651"/>
+</kw>
+<kw name="Wait For Email" library="ImapLibrary2">
+<var>${LATEST}</var>
+<arg>sender=contact@bestcours.com</arg>
+<arg>timeout=300</arg>
+<doc>Wait for email message to arrived base on any given filter criteria.
+Returns email index of the latest email message received.</doc>
+<status status="NOT RUN" starttime="20230720 12:28:02.652" endtime="20230720 12:28:02.652"/>
+</kw>
+<kw name="Open Link From Email" library="ImapLibrary2">
+<var>${HTML}</var>
+<arg>${LATEST}</arg>
+<doc>Open link URL from given ``link_index`` in email message body of given ``email_index``.
+Returns HTML content of opened link URL.</doc>
+<status status="NOT RUN" starttime="20230720 12:28:02.653" endtime="20230720 12:28:02.653"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${HTML}</arg>
+<arg>You are receiving this email because we received a password reset request for your account.</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20230720 12:28:02.653" endtime="20230720 12:28:02.653"/>
+</kw>
+<kw name="Close Mailbox" library="ImapLibrary2">
+<doc>Close IMAP email client session.</doc>
+<status status="NOT RUN" starttime="20230720 12:28:02.654" endtime="20230720 12:28:02.654"/>
+</kw>
+<status status="FAIL" starttime="20230720 12:28:02.006" endtime="20230720 12:28:02.654"/>
+</kw>
+<kw name="Fermer le navigateur" library="selenium_utils" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230720 12:28:02.657" endtime="20230720 12:28:02.751"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Fin de l'exécution de test</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230720 12:28:02.752" endtime="20230720 12:28:02.752"/>
+</kw>
+<status status="PASS" starttime="20230720 12:28:02.656" endtime="20230720 12:28:02.752"/>
+</kw>
+<status status="FAIL" starttime="20230720 12:27:44.527" endtime="20230720 12:28:02.752">error: b'[AUTHENTICATIONFAILED] Invalid credentials (Failure)'</status>
+</test>
+<status status="FAIL" starttime="20230720 12:27:44.374" endtime="20230720 12:28:02.754"/>
+</suite>
+<status status="FAIL" starttime="20230720 12:27:44.373" endtime="20230720 12:28:02.759"/>
+</suite>
+<status status="FAIL" starttime="20230720 12:27:44.353" endtime="20230720 12:28:02.762"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Reinitialize Password Test Auto">Reinitialize Password Test Auto</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tests">Reinitialize Password Test Auto.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Reinitilize Password">Reinitialize Password Test Auto.Tests.Reinitilize Password</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
